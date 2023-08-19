@@ -629,7 +629,7 @@ Sensor_ID18.prototype.transmitInterval = function() {
 Sensor_ID18.prototype.generateJSON = function(buffer) {
   return { 'temperature': [ this.convertTemperature(buffer.readUInt16BE(0)) ],
             'humidity': [ this.convertHumidity(buffer.readUInt8(2)) ],
-            'airPressure': [ this.convertAirPressure(buffer.readUInt16BE(4)) ], 
+            'airPressure': [ this.convertAirPressure(buffer.readUInt16BE(3)) ], 
          };
 }
 Sensor_ID18.prototype.debugString = function() {
